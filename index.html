@@ -1,113 +1,51 @@
-/* General */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Serif', Garamond;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Illustrator Crow: Ilustración y Diseño.">
+  <meta name="author" content="Illustrator Crow">
+  <title>Illustrator Crow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Banner con enlaces de navegación -->
+  <section class="banner">
+    <img src="https://i.pinimg.com/1200x/29/bf/bb/29bfbb48eeeae4d8e35e49015765a530.jpg" alt="Imagen de fondo con un diseño artístico de ilustración" class="banner-image">
+    
+    <!-- Menú de navegación dentro del banner -->
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
 
-body {
-  padding-top: 0; /* Elimina el padding-top que podría estar causando espacio */
-}
+    <div class="banner-text">
+      <h1>Illustrator Crow</h1>
+      <p>Ilustración y Diseño</p>
+    </div>
+  </section>
 
-/* Estilo para el contenedor del banner */
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* 100% de la altura de la pantalla */
-  overflow: hidden;
-  margin: 0; /* Asegura que no haya margen adicional */
-}
+  <!-- Contenido principal -->
+  <main>
+    <section id="home">
+      <!-- Sección de inicio -->
+    </section>
 
-/* Imagen de fondo del banner */
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+    <section id="about">
+      <!-- Sección sobre mí -->
+    </section>
 
-/* Estilo para el menú de navegación dentro del banner */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    <section id="portfolio">
+      <!-- Sección portafolio -->
+    </section>
 
-.navbar-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  margin: 0 20px;
-}
-
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-  padding: 5px 10px;
-}
-
-.navbar-links a:hover {
-  color: #ff4081;
-}
-
-/* Estilo para el texto del banner */
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 1;
-}
-
-.banner-text h1 {
-  font-size: 3rem;
-}
-
-.banner-text p {
-  font-size: 1.5rem;
-}
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-  .navbar-links {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .navbar-links li {
-    margin: 0 15px;
-  }
-
-  .banner-text h1 {
-    font-size: 2rem;
-  }
-
-  .banner-text p {
-    font-size: 1.2rem;
-  }
-
-  .banner {
-    height: 50vh;
-  }
-}
+    <section id="contact">
+      <!-- Sección de contacto -->
+    </section>
+  </main>
+</body>
+</html>
