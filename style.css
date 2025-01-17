@@ -48,6 +48,62 @@ body {
   font-size: 1.5rem;
 }
 
+/* Estilo general para el menú de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar-links {
+  display: flex; /* Alinea los elementos en una fila */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 20px; /* Espaciado entre los enlaces */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  padding: 5px 10px; /* Añadido un poco de relleno alrededor de los enlaces */
+}
+
+.navbar-links a:hover {
+  color: #ff4081; /* Cambio de color al pasar el cursor */
+}
+
+/* Para que el contenido no quede cubierto por el menú */
+body {
+  padding-top: 70px; /* Ajusta según la altura del menú */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: row; /* Mantiene los enlaces en fila */
+    align-items: center; /* Centra los enlaces en la fila */
+  }
+
+  .navbar-links li {
+    margin: 0 15px; /* Ajuste del espaciado entre los enlaces */
+  }
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
   .banner-text h1 {
