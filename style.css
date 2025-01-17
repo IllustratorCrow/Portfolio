@@ -48,16 +48,14 @@ body {
   font-size: 1.5rem;
 }
 
-/* Estilo general para el menú de navegación */
+/* Estilo para el menú de navegación */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 10px; /* Ajuste para que el menú esté un poco abajo del borde superior */
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-  padding: 10px 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .navbar-links {
