@@ -22,16 +22,18 @@ html, body {
   margin: 0; /* Asegura que no haya margen adicional */
 }
 
-/* Imagen de fondo del banner */
+/* Ajustar la imagen de fondo del banner */
 .banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantiene las proporciones de la imagen */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  width: 100%; /* Asegura que ocupe el ancho completo */
+  height: 100%; /* Asegura que ocupe la altura del banner */
+  object-fit: cover; /* Mantén la proporción y rellena el área */
+  object-position: center; /* Centra la imagen */
+  position: absolute; /* Mantiene la imagen fija dentro del contenedor */
+  top: 0; /* Alinea al inicio */
+  left: 0; /* Alinea al inicio */
+  z-index: -1; /* Envía la imagen detrás del contenido */
 }
+
 
 /* Estilo para el menú de navegación dentro del banner */
 .navbar {
