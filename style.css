@@ -1,7 +1,8 @@
 /* General */
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: 'Serif', Garamond;
 }
 
@@ -32,13 +33,21 @@ body {
 
 /* Estilo para el menú de navegación dentro del banner */
 .navbar {
-  position: absolute;
-  top: 10px; /* Ajusta el menú para que esté encima del título */
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+body {
+  padding-top: 70px;  /* Ajusta este valor según el tamaño de la barra de navegación */
+}
+
+/* Enlaces del menú de navegación */
 .navbar-links {
   display: flex; /* Alinea los elementos en una fila */
   justify-content: center; /* Centra los elementos horizontalmente */
@@ -83,11 +92,6 @@ body {
 
 .banner-text p {
   font-size: 1.5rem;
-}
-
-/* Para que el contenido no quede cubierto por el menú */
-body {
-  padding-top: 70px; /* Ajusta según la altura del menú */
 }
 
 /* Estilo responsivo */
