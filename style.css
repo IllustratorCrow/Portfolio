@@ -10,7 +10,7 @@
 html, body {
   height: 100%;
   font-family: 'Serif', Garamond;
-  overflow-x: hidden; /* Elimina cualquier desplazamiento horizontal */
+  overflow-x: hidden;
 }
 
 /* Estilo para el contenedor del banner */
@@ -39,13 +39,12 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo transparente oscuro */
+  background-color: transparent; /* Hacer que el fondo sea transparente */
   padding: 10px 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para los enlaces de la barra de navegación */
 .navbar-links {
   display: flex;
   justify-content: center;
