@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Asegura que no haya relleno o margen extra no esperado */
+  box-sizing: border-box;
 }
 
 html, body {
@@ -16,13 +16,14 @@ html, body {
   width: 100%;
   height: 100vh; /* 100% de la altura de la pantalla */
   overflow: hidden;
+  margin: 0;
 }
 
 /* Imagen de fondo del banner */
 .banner-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Mantiene las proporciones de la imagen */
   position: absolute;
   top: 0;
   left: 0;
@@ -35,12 +36,13 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo transparente oscuro */
   padding: 10px 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para los enlaces de la barra de navegación */
 .navbar-links {
   display: flex;
   justify-content: center;
