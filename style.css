@@ -30,31 +30,12 @@ body {
   z-index: -1;
 }
 
-/* Estilo para el texto sobre la imagen */
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-}
-
-.banner-text h1 {
-  font-size: 3rem;
-}
-
-.banner-text p {
-  font-size: 1.5rem;
-}
-
-/* Estilo para el menú de navegación */
+/* Estilo para el menú de navegación dentro del banner */
 .navbar {
   position: absolute;
-  top: 10px; /* Ajuste para que el menú esté un poco abajo del borde superior */
+  top: 10px; /* Ajusta el menú para que esté encima del título */
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
   z-index: 1000;
 }
 
@@ -83,6 +64,25 @@ body {
 
 .navbar-links a:hover {
   color: #ff4081; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilo para el texto del banner */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1; /* Asegura que el texto esté por encima de los enlaces */
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+}
+
+.banner-text p {
+  font-size: 1.5rem;
 }
 
 /* Para que el contenido no quede cubierto por el menú */
