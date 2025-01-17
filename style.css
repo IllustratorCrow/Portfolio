@@ -102,10 +102,8 @@ body {
   .navbar-links li {
     margin: 0 15px; /* Ajuste del espaciado entre los enlaces */
   }
-}
 
-/* Responsividad */
-@media (max-width: 768px) {
+  /* Ajustes para el banner */
   .banner-text h1 {
     font-size: 2rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
   }
