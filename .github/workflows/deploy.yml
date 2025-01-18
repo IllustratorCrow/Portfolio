@@ -19,12 +19,11 @@ jobs:
 
       - name: Install Jekyll and dependencies
         run: |
-          gem install jekyll bundler
           bundle install
 
       - name: Build the site
         run: |
-          jekyll build -d _site
+          bundle exec jekyll build -d _site
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
