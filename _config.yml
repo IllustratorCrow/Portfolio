@@ -2,7 +2,7 @@ title: "Mi Portafolio"
 description: "Este es mi portafolio personal"
 theme: minima  # O el tema que prefieras
 url: "https://github.com/IllustratorCrow"  # Reemplaza con tu URL
-baseurl: ""  # Asegúrate de que esto esté vacío si estás usando un repositorio principal
+baseurl: "/Portfolio" # Asegúrate de que esto esté vacío si estás usando un repositorio principal
 
 markdown: kramdown
 plugins:
