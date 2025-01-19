@@ -81,6 +81,10 @@ body {
   width: 60%; /* El slider ocupa el 60% del espacio */
   position: relative;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Esto asegura que las imágenes no se desborden */
 }
 
 .slides {
