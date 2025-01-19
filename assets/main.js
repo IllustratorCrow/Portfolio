@@ -3,7 +3,6 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const totalSlides = slides.length;
 
-// Mostrar la imagen en el índice adecuado
 const showSlide = (index) => {
   if (index >= totalSlides) {
     currentSlide = 0; // Si el índice es mayor que el total, vuelve al primer slide
@@ -13,10 +12,10 @@ const showSlide = (index) => {
     currentSlide = index;
   }
 
-  // Cambiar la posición del slider con la animación
+  // Animación de deslizamiento
   document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
 
-  // Activar el punto de navegación correspondiente
+  // Activar el punto correspondiente
   dots.forEach(dot => dot.classList.remove('active'));
   dots[currentSlide].classList.add('active');
 };
@@ -38,4 +37,6 @@ dots.forEach((dot, index) => {
 });
 
 // Mostrar el primer slide al inicio
-showSlide(currentSlide);
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentSlide);
+});
