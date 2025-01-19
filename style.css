@@ -1,4 +1,4 @@
-/* Global reset */
+/* General reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +27,7 @@
 
 .banner-text h1 {
   font-size: 3rem;
+  margin: 0;
 }
 
 .banner-text p {
@@ -41,7 +42,7 @@
 }
 
 .navbar-links {
-  list-style: none;
+  list-style-type: none;
 }
 
 .navbar-links li {
@@ -56,31 +57,19 @@
   font-weight: bold;
 }
 
-/* Slideshow */
+/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
+/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-.mySlides img {
-  width: 100%;
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
+/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -92,21 +81,40 @@
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
   user-select: none;
-}
-
-.prev {
-  left: 0;
 }
 
 .next {
   right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0,0,0,0.8);
 }
 
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -122,12 +130,13 @@
   background-color: #717171;
 }
 
+/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from { opacity: 0.4 }
-  to { opacity: 1 }
+  from {opacity: .4}
+  to {opacity: 1}
 }
