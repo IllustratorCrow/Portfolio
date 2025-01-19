@@ -18,17 +18,24 @@ const showSlide = (index) => {
 
   // Activar el punto de navegación correspondiente
   dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentSlide].classList.add('active');
+  if (dots[currentSlide]) {
+    dots[currentSlide].classList.add('active');
+  }
 };
 
 // Botones de navegación
-document.querySelector('.left-arrow').addEventListener('click', () => {
-  showSlide(currentSlide - 1); // Mostrar la imagen anterior
-});
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
 
-document.querySelector('.right-arrow').addEventListener('click', () => {
-  showSlide(currentSlide + 1); // Mostrar la imagen siguiente
-});
+if (leftArrow && rightArrow) {
+  leftArrow.addEventListener('click', () => {
+    showSlide(currentSlide - 1); // Mostrar la imagen anterior
+  });
+
+  rightArrow.addEventListener('click', () => {
+    showSlide(currentSlide + 1); // Mostrar la imagen siguiente
+  });
+}
 
 // Agregar interactividad a los puntos de navegación
 dots.forEach((dot, index) => {
@@ -37,5 +44,5 @@ dots.forEach((dot, index) => {
   });
 });
 
-// Mostrar el primer slide al inicio
+// Mostrar el primer slide al inicio y asegurarse de que la primera imagen es visible
 showSlide(currentSlide);
