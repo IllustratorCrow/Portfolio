@@ -15,29 +15,39 @@ jobs:
       pages: write
 
     environment:
-      name: github-pages  # Añadir esta línea
+      name: github-pages  # Añadir esta línea para asegurar que el entorno sea correcto
 
     steps:
+      # Paso 1: Comprobamos el repositorio
       - name: Check out repository
         uses: actions/checkout@v2
 
+      # Paso 2: Eliminar el directorio .git
+      - name: Remove Git directory
+        run: rm -rf .git
+
+      # Paso 3: Instalar Ruby y Bundler
       - name: Set up Ruby and Bundler
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0
 
+      # Paso 4: Instalar dependencias de Jekyll
       - name: Install Jekyll and dependencies
         run: bundle install
 
+      # Paso 5: Construir el sitio
       - name: Build the site
         run: bundle exec jekyll build -d _site
 
+      # Paso 6: Subir el sitio construido como un artefacto
       - name: Upload the built site as an artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: _site
 
+      # Paso 7: Desplegar en GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
