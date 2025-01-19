@@ -1,9 +1,9 @@
-/* Estilos generales para el banner */
+/* CSS del Banner */
 .banner {
   position: relative;
   width: 100%;
-  height: 400px; /* Ajusta la altura del banner */
-  overflow: hidden; /* Ocultamos cualquier contenido que se salga */
+  height: 400px;
+  overflow: hidden;
 }
 
 .banner-image {
@@ -12,23 +12,43 @@
   object-fit: cover;
 }
 
-/* Estilos para las columnas laterales */
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-.left-column, .right-column {
-  width: 20%; /* Ajusta el ancho de las columnas */
-  background-color: #f0f0f0; /* Color de fondo para visualizarlas */
-  padding: 10px;
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilo del texto en el banner */
+.banner-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+/* Estilos para el slider */
+.main-content {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .slider-container {
   position: relative;
-  width: 60%; /* Ajusta el tamaño del slider */
-  margin: 0 auto;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -38,15 +58,16 @@
 }
 
 .slide {
-  width: 100%;
+  min-width: 100%;
 }
 
 .slide img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-/* Estilos para las flechas */
+/* Estilo para las flechas */
 .left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
@@ -59,9 +80,9 @@
 }
 
 .left-arrow {
-  left: 10px;
+  left: 20px;
 }
 
 .right-arrow {
-  right: 10px;
+  right: 20px;
 }
