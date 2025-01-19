@@ -28,19 +28,35 @@
       <p>Ilustración y Diseño</p>
     </div>
   </section>
-<!-- Slider de proyectos -->
-<section class="slider-container">
-  <div class="slider">
-    <button class="slider-arrow left-arrow">&#8249;</button>
-    <div class="slider-track">
-      <img src="https://github.com/IllustratorCrow/Portfolio/blob/main/imagenes/Proyecto%201.png?raw=true" alt="Proyecto 1" class="slider-image">
-      <img src="https://github.com/IllustratorCrow/Portfolio/blob/main/imagenes/Proyecto%202.png?raw=true" alt="Proyecto 2" class="slider-image">
-      <img src="https://github.com/IllustratorCrow/Portfolio/blob/main/imagenes/Proyecto%203.png?raw=true" alt="Proyecto 3" class="slider-image">
-      <img src="https://github.com/IllustratorCrow/Portfolio/blob/main/imagenes/Proyecto%204.png?raw=true" class="slider-image">
+
+  <!-- Nuevo Slider de proyectos -->
+  <section class="slider-container">
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/main/imagenes/Proyecto%201.png" alt="Proyecto 1">
+        </div>
+        <div class="slide">
+          <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/main/imagenes/Proyecto%202.png" alt="Proyecto 2">
+        </div>
+        <div class="slide">
+          <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/main/imagenes/Proyecto%203.png" alt="Proyecto 3">
+        </div>
+        <div class="slide">
+          <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/main/imagenes/Proyecto%204.png" alt="Proyecto 4">
+        </div>
+      </div>
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
     </div>
-    <button class="slider-arrow right-arrow">&#8250;</button>
-  </div>
-</section>
+
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
 
   <!-- Contenido principal -->
   <main>
@@ -60,5 +76,42 @@
       <!-- Sección de contacto -->
     </section>
   </main>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    const showSlide = (index) => {
+      if (index >= totalSlides) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else {
+        currentSlide = index;
+      }
+
+      document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSlide].classList.add('active');
+    };
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+      });
+    });
+
+    showSlide(currentSlide); // Show the first slide initially
+  </script>
 </body>
 </html>
