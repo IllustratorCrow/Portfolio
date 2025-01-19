@@ -1,14 +1,9 @@
-/* Estilo general */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilos generales para el banner */
 .banner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 400px; /* Ajusta la altura del banner */
+  overflow: hidden; /* Ocultamos cualquier contenido que se salga */
 }
 
 .banner-image {
@@ -17,48 +12,23 @@ body {
   object-fit: cover;
 }
 
-.navbar {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.navbar-links {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-links li {
-  display: inline;
-  margin: 0 10px;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: white;
-}
-
-.banner-text {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  color: white;
-}
-
+/* Estilos para las columnas laterales */
 .main-content {
   display: flex;
+  justify-content: space-between;
   margin: 20px;
 }
 
 .left-column, .right-column {
-  flex: 1;
-  padding: 20px;
-  background-color: #f4f4f4;
+  width: 20%; /* Ajusta el ancho de las columnas */
+  background-color: #f0f0f0; /* Color de fondo para visualizarlas */
+  padding: 10px;
 }
 
 .slider-container {
   position: relative;
-  width: 60%;
+  width: 60%; /* Ajusta el tamaño del slider */
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -67,17 +37,22 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
+.slide {
+  width: 100%;
+}
+
 .slide img {
   width: 100%;
   height: auto;
 }
 
+/* Estilos para las flechas */
 .left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2em;
-  color: white;
+  font-size: 30px;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   cursor: pointer;
