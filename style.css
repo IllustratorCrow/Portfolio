@@ -72,17 +72,17 @@
   width: 736px;  /* El tamaño del slider debe coincidir con el tamaño de las imágenes */
   max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;  /* Oculta las imágenes fuera del contenedor */
 }
 
 .slides {
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  transition: transform 0.5s ease-in-out; /* Añadido para transición suave */
 }
 
 .slide {
-  display: none; /* Inicialmente ocultamos todas las imágenes */
-  width: 100%;
+  min-width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+  display: block;
 }
 
 .slide img {
