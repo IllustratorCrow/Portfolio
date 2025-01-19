@@ -14,7 +14,7 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Ajuste de la altura */
   overflow: hidden;
 }
 
@@ -40,7 +40,6 @@ body {
 
 .navbar-links li {
   font-size: 18px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);  /* Sombra añadida */
 }
 
 .navbar-links li a {
@@ -55,7 +54,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  font-family: 'Garamond', serif;  /* Cambiado a Garamond */
+  font-family: 'Garamond', serif; /* Tipografía Garamond */
 }
 
 .banner-text h1 {
@@ -66,21 +65,21 @@ body {
   font-size: 1.2em;
 }
 
-/* Contenedores de las columnas */
+/* Columns Style */
 .columns-container {
   display: flex;
   width: 100%;
 }
 
 .left-column, .right-column {
-  width: 15%; /* Cada columna lateral ocupará el 15% */
+  width: 15%;
   background-color: #f4f4f4; /* Color para visualizar las columnas */
 }
 
 .main-content {
-  width: 70%; /* El contenido principal ocupará el 70% */
-  background-color: #fff;
-  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -88,12 +87,11 @@ body {
 .slider-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .slides {
   display: flex;
+  overflow: hidden; /* Para que solo se vea una imagen a la vez */
   transition: transform 0.5s ease-in-out;
 }
 
