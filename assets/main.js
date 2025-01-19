@@ -3,11 +3,12 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const totalSlides = slides.length;
 
+// Mostrar la imagen en el índice adecuado
 const showSlide = (index) => {
   if (index >= totalSlides) {
-    currentSlide = 0;
+    currentSlide = 0; // Si el índice es mayor que el total, vuelve al primer slide
   } else if (index < 0) {
-    currentSlide = totalSlides - 1;
+    currentSlide = totalSlides - 1; // Si el índice es negativo, va al último slide
   } else {
     currentSlide = index;
   }
@@ -22,17 +23,17 @@ const showSlide = (index) => {
 
 // Botones de navegación
 document.querySelector('.left-arrow').addEventListener('click', () => {
-  showSlide(currentSlide - 1);
+  showSlide(currentSlide - 1); // Mostrar la imagen anterior
 });
 
 document.querySelector('.right-arrow').addEventListener('click', () => {
-  showSlide(currentSlide + 1);
+  showSlide(currentSlide + 1); // Mostrar la imagen siguiente
 });
 
 // Agregar interactividad a los puntos de navegación
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    showSlide(index);
+    showSlide(index); // Cambiar al slide correspondiente al punto clickeado
   });
 });
 
