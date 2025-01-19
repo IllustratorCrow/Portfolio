@@ -18,7 +18,7 @@ function showSlide(index) {
   }
 
   // Movemos las imágenes usando el índice
-  const offset = -currentSlide * 100;  // Calculamos el desplazamiento
+  const offset = -currentSlide * 100;  // Calculamos el desplazamiento en porcentaje
   document.querySelector('.slides').style.transform = `translateX(${offset}%)`; // Aplicamos el desplazamiento
 }
 
