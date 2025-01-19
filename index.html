@@ -9,11 +9,11 @@
 <body>
   <!-- Banner -->
   <div class="banner">
-    <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/banner.jpg" alt="Banner" class="banner-image">
+    <img src="https://imgur.com/ahpKsvK" alt="Banner" class="banner-image">
     <div class="navbar">
       <ul class="navbar-links">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Sobre mi</a></li>
         <li><a href="#">Portafolio</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
@@ -24,23 +24,42 @@
     </div>
   </div>
 
-<!-- Slideshow container -->
+ <!-- Slideshow container -->
 <div class="slideshow-container">
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%201.png" alt="Proyecto 1">
-  </div>
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%202.png" alt="Proyecto 2">
-  </div>
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%203.png" alt="Proyecto 3">
-  </div>
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%204.png" alt="Proyecto 4">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="https://imgur.com/fSoRLtO" style="width:100%">
+    <div class="text">Proyecto 1</div>
   </div>
 
-  <a class="prev" onclick="prevSlide()">&#10094;</a>
-  <a class="next" onclick="nextSlide()">&#10095;</a>
+  <div class="mySlides fade">
+    <img src="https://imgur.com/omrUgoY" style="width:100%">
+    <div class="text">Proyecto 2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://imgur.com/sCOzlLK" style="width:100%">
+    <div class="text">Proyecto 3</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://imgur.com/kweP0bk" style="width:100%">
+    <div class="text">Proyecto 4</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
 </div>
 
   <script src="main.js"></script>
