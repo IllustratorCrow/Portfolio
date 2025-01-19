@@ -1,16 +1,16 @@
-/* Reset de márgenes y padding por defecto */
-* {
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos del banner */
+/* Banner */
 .banner {
   position: relative;
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  height: 300px; /* Ajusta según sea necesario */
 }
 
 .banner-image {
@@ -30,71 +30,64 @@
 
 .navbar {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
 }
 
 .navbar-links {
   list-style: none;
-  display: flex;
+  padding: 0;
 }
 
 .navbar-links li {
-  margin: 0 15px;
+  display: inline;
+  margin-left: 20px;
 }
 
 .navbar-links a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Estilos de las columnas */
+/* Main Content */
 .main-content {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  margin: 20px;
 }
 
-.left-column,
-.right-column {
-  width: 20%;
-  background-color: #f0f0f0; /* Color de fondo para las columnas */
-  padding: 10px;
+/* Columnas */
+.left-column, .right-column {
+  width: 25%; /* Columnas más estrechas */
+  background-color: #f4f4f4; /* Color de fondo para visibilidad */
+  padding: 20px;
 }
 
 .slider-container {
   position: relative;
-  width: 60%;  /* El slider ocupa el 60% del ancho */
+  width: 50%; /* Hacemos que el slider ocupe la mitad del espacio */
   overflow: hidden;
 }
 
 .slides {
-  display: flex;  /* Coloca las imágenes en una fila */
-  transition: transform 0.5s ease-in-out;  /* Transición suave para el movimiento */
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .slide {
-  min-width: 100%;  /* Cada imagen ocupa el 100% del contenedor */
-  transition: opacity 1s ease;  /* Transición de desvanecimiento */
+  width: 100%;
 }
 
-.slide img {
-  width: 100%;  /* Las imágenes ocupan todo el ancho del contenedor */
-  height: auto;
-}
-
-/* Flechas */
 .left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2em;
-  color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
   padding: 10px;
   cursor: pointer;
-  z-index: 10;
 }
 
 .left-arrow {
@@ -103,4 +96,8 @@
 
 .right-arrow {
   right: 10px;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
