@@ -1,41 +1,38 @@
-// Seleccionamos los elementos del slider y las flechas
-const slides = document.querySelectorAll('.slide');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// Inicializamos el índice de la imagen actual
-let currentSlide = 0;
-
-// Función para mostrar el slide actual
-function showSlide(index) {
-  // Nos aseguramos de que el índice esté dentro del rango
-  if (index < 0) {
-    currentSlide = slides.length - 1; // Si el índice es menor que 0, vamos al último slide
-  } else if (index >= slides.length) {
-    currentSlide = 0; // Si el índice es mayor o igual al número de slides, vamos al primero
-  } else {
-    currentSlide = index; // De lo contrario, usamos el índice proporcionado
-  }
-
-  // Aplicamos la transformación al contenedor de las imágenes para moverlo
-  const slidesContainer = document.querySelector('.slides');
-  slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+// Funciones de control de los botones
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-// Función para mover el slider a la izquierda
-leftArrow.addEventListener('click', () => {
-  showSlide(currentSlide - 1); // Mostramos el slide anterior
-});
+// Función para controlar los puntos de navegación
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// Función para mover el slider a la derecha
-rightArrow.addEventListener('click', () => {
-  showSlide(currentSlide + 1); // Mostramos el siguiente slide
-});
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  
+  // Aseguramos que el índice esté dentro de los límites
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  
+  // Ocultar todas las imágenes
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 
-// Hacemos que las imágenes se cambien automáticamente cada 5 segundos (opcional)
-setInterval(() => {
-  showSlide(currentSlide + 1); // Mueve el slider automáticamente a la siguiente imagen
-}, 5000); // 5000 milisegundos = 5 segundos
+  // Desactivar los puntos
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
 
-// Inicializamos el slider mostrando la primera imagen
-showSlide(currentSlide);
+  // Mostrar la imagen actual
+  slides[slideIndex-1].style.display = "block";
+
+  // Activar el punto correspondiente
+  dots[slideIndex-1].className += " active";
+}
