@@ -1,11 +1,20 @@
+/* Asegurar que todo el cuerpo ocupe el ancho completo sin márgenes ni rellenos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Contenedor general del slider */
 .slider-container {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  height: 400px; /* Asegura una altura adecuada para el slider */
   position: relative;
   overflow: hidden;
   background-color: #fff;
+  display: block;
 }
 
 /* Estilo general de las imágenes del slider */
@@ -17,6 +26,8 @@
 .slide {
   flex-shrink: 0;
   width: 100%;
+  height: 100%; /* Asegura que las imágenes cubran todo el alto del slider */
+  object-fit: cover; /* Asegura que las imágenes se ajusten bien dentro del contenedor */
   display: none; /* Inicialmente, todas las imágenes están ocultas */
 }
 
@@ -50,11 +61,11 @@
 }
 
 .left-arrow {
-  left: 20px; /* Separar un poco más de la imagen */
+  left: 20px; /* Separar más de la imagen */
 }
 
 .right-arrow {
-  right: 20px; /* Separar un poco más de la imagen */
+  right: 20px; /* Separar más de la imagen */
 }
 
 /* Estilo para los puntos de navegación */
@@ -77,4 +88,61 @@
 
 .dot.active {
   background-color: #ff4081;
+}
+
+/* Banner con enlaces de navegación */
+.banner {
+  width: 100%;
+  position: relative;
+  height: 400px; /* Ajusta la altura del banner */
+  background-color: #000; /* Fondo de color negro por defecto */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-links li {
+  font-size: 18px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+}
+
+.banner-text p {
+  font-size: 1.5rem;
 }
