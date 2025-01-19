@@ -1,35 +1,40 @@
-// Seleccionamos los elementos del slider
+// Seleccionamos los elementos del slider y las flechas
 const slides = document.querySelectorAll('.slide');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
-let currentIndex = 0;  // Para controlar la imagen actual
 
-// Función para mostrar la imagen en el índice actual
+// Inicializamos el índice de la imagen actual
+let currentSlide = 0;
+
+// Función para mostrar el slide actual
 function showSlide(index) {
-  // Evitar que el índice se desborde
+  // Nos aseguramos de que el índice esté dentro del rango
   if (index < 0) {
-    currentIndex = slides.length - 1;
+    currentSlide = slides.length - 1; // Si el índice es menor que 0, vamos al último slide
   } else if (index >= slides.length) {
-    currentIndex = 0;
+    currentSlide = 0; // Si el índice es mayor o igual al número de slides, vamos al primero
+  } else {
+    currentSlide = index; // De lo contrario, usamos el índice proporcionado
   }
 
-  // Desplazamos el contenedor de las imágenes
-  const slidesContainer = document.querySelector('.slides');
-  const offset = -currentIndex * 100;  // Desplazamiento en porcentaje
-  slidesContainer.style.transform = `translateX(${offset}%)`;
+  // Ocultamos todas las imágenes
+  slides.forEach((slide, i) => {
+    slide.style.display = 'none'; // Ocultamos todos los slides
+  });
+
+  // Mostramos la imagen actual
+  slides[currentSlide].style.display = 'block'; // Solo mostramos el slide correspondiente
 }
 
-// Evento para la flecha izquierda
+// Función para mover el slider a la izquierda
 leftArrow.addEventListener('click', () => {
-  currentIndex--;
-  showSlide(currentIndex);
+  showSlide(currentSlide - 1); // Mostramos el slide anterior
 });
 
-// Evento para la flecha derecha
+// Función para mover el slider a la derecha
 rightArrow.addEventListener('click', () => {
-  currentIndex++;
-  showSlide(currentIndex);
+  showSlide(currentSlide + 1); // Mostramos el siguiente slide
 });
 
 // Inicializamos el slider mostrando la primera imagen
-showSlide(currentIndex);
+showSlide(currentSlide);
