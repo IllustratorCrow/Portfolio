@@ -1,11 +1,10 @@
 /* Contenedor general del slider */
 .slider-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-color: #fff;
 }
 
 /* Estilo general de las imágenes del slider */
@@ -17,16 +16,10 @@
 .slide {
   flex-shrink: 0;
   width: 100%;
-  display: none; /* Inicialmente, todas las imágenes están ocultas */
+  display: block; /* Asegúrate de que las imágenes sean visibles */
 }
 
-.slide.active {
-  display: block; /* Solo la imagen activa será visible */
-}
-
-/* Estilo para los botones de navegación */
-.left-arrow,
-.right-arrow {
+.left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -44,20 +37,10 @@
   transition: background-color 0.3s;
 }
 
-.left-arrow:hover,
-.right-arrow:hover {
+.left-arrow:hover, .right-arrow:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.left-arrow {
-  left: 10px;
-}
-
-.right-arrow {
-  right: 10px;
-}
-
-/* Estilo para los puntos de navegación */
 .dots {
   position: absolute;
   bottom: 10px;
@@ -79,9 +62,54 @@
   background-color: #ff4081;
 }
 
-/* Asegurarse que las imágenes del slider tengan un tamaño correcto */
-.slider img {
+/* Banner */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner-image {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Asegura que la imagen se ajuste bien sin distorsionarse */
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Asegura la visibilidad del texto */
+}
+
+.navbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li {
+  margin: 0 10px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  color: #ff4081; /* Color de hover */
 }
