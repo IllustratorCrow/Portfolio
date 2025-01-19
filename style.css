@@ -62,19 +62,19 @@
 
 /* Contenedor del slideshow */
 .slideshow-container {
-  max-width: 100%;
+  width: 100%;
   position: relative;
   margin: 0 auto;
-  padding-top: 20px; /* Ajusta según sea necesario */
+  padding-top: 50px; /* Ajusta esto si es necesario */
   z-index: 1;
+  height: 500px; /* Ajusta según el tamaño del banner */
 }
 
 /* Las diapositivas */
 .mySlides {
   display: none;
   width: 100%;
-  height: auto;
-  max-height: 500px; /* Ajusta según el tamaño deseado */
+  height: 100%;
 }
 
 /* Botones de navegación */
@@ -145,4 +145,3 @@
   from { opacity: .4; }
   to { opacity: 1; }
 }
-
