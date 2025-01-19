@@ -17,13 +17,9 @@ function showSlide(index) {
     currentSlide = index; // De lo contrario, usamos el índice proporcionado
   }
 
-  // Ocultamos todas las imágenes
-  slides.forEach((slide, i) => {
-    slide.style.display = 'none'; // Ocultamos todos los slides
-  });
-
-  // Mostramos la imagen actual
-  slides[currentSlide].style.display = 'block'; // Solo mostramos el slide correspondiente
+  // Movemos las imágenes usando el índice
+  const offset = -currentSlide * 100;  // Calculamos el desplazamiento
+  document.querySelector('.slides').style.transform = `translateX(${offset}%)`; // Aplicamos el desplazamiento
 }
 
 // Función para mover el slider a la izquierda
