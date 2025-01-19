@@ -15,7 +15,8 @@
 .navbar {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centra la barra de navegación */
 }
 
 .navbar-links {
@@ -38,8 +39,10 @@
 .banner-text {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el texto */
   color: white;
+  text-align: center;
 }
 
 .banner-text h1 {
@@ -60,7 +63,7 @@
 
 /* Estilo de las columnas */
 .left-column, .right-column {
-  width: 48%;
+  width: 30%; /* Hacemos las columnas más estrechas */
   background-color: #f4f4f4;
   padding: 20px;
   box-sizing: border-box;
@@ -69,7 +72,7 @@
 /* Estilo para el slider */
 .slider-container {
   position: relative;
-  width: 736px;  /* El tamaño del slider debe coincidir con el tamaño de las imágenes */
+  width: 80%; /* Hacemos el slider más ancho */
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;  /* Oculta las imágenes fuera del contenedor */
@@ -77,16 +80,16 @@
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Añadido para transición suave */
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  min-width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+  min-width: 100%;
   display: block;
 }
 
 .slide img {
-  width: 100%; /* Las imágenes se ajustan al contenedor */
+  width: 100%;
   height: auto;
 }
 
