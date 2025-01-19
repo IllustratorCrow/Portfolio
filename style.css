@@ -127,8 +127,8 @@ html, body {
     position: relative;
     width: 80%; /* Ajusta el ancho según prefieras */
     max-width: 800px;
-    overflow: hidden;
-    display: flex;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    display: flex; /* Hace que las imágenes se muestren en fila */
     justify-content: center;
     align-items: center;
     border: 2px solid #ddd;
@@ -138,22 +138,20 @@ html, body {
   }
 
   /* Estilo para las imágenes del slider */
+  .slides {
+    display: flex; /* Asegura que las imágenes se muestren en fila */
+    transition: transform 0.5s ease-in-out; /* Hace que el cambio de imagen sea suave */
+  }
+
   .slide {
-    width: 100%;
-    flex-shrink: 0;
-    display: none; /* Ocultar todas las imágenes por defecto */
+    width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+    display: none; /* Oculta todas las imágenes por defecto */
   }
 
   /* Solo mostrar la imagen activa */
   .slide.active {
-    display: block; /* Mostrar la imagen activa */
-  }
-
-  .slide img {
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+    display: block; /* Solo la imagen activa será visible */
   }
 
   /* Botones de navegación del slider */
