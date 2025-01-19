@@ -25,11 +25,13 @@ function showSlide(index) {
 
 // Función para mover el slider a la izquierda
 leftArrow.addEventListener('click', () => {
+  console.log("Flecha izquierda clickeada"); // Verificación
   showSlide(currentSlide - 1); // Mostramos el slide anterior
 });
 
 // Función para mover el slider a la derecha
 rightArrow.addEventListener('click', () => {
+  console.log("Flecha derecha clickeada"); // Verificación
   showSlide(currentSlide + 1); // Mostramos el siguiente slide
 });
 
