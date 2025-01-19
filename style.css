@@ -1,213 +1,93 @@
-/* Reset global */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Serif', Garamond;
-  overflow-x: hidden;
-}
-
-/* Estilo para el contenedor del banner */
-.banner {
+/* Estilo general del slider */
+.slider-container {
   width: 100%;
-  height: 80vh; /* Cambia el porcentaje según lo que prefieras */
-  overflow: hidden;
-  position: relative;
-  margin: 0; /* Elimina márgenes adicionales */
-}
-
-/* Ajustar la imagen de fondo del banner */
-.banner-image {
-  width: 100%; /* Asegura que ocupe el ancho completo */
-  height: 100%; /* Asegura que ocupe la altura del banner */
-  object-fit: cover; /* Mantén la proporción y rellena el área */
-  object-position: center; /* Centra la imagen */
-  position: absolute; /* Mantiene la imagen fija dentro del contenedor */
-  top: 0; /* Alinea al inicio */
-  left: 0; /* Alinea al inicio */
-  z-index: -1; /* Envía la imagen detrás del contenido */
-}
-
-/* Estilo para el menú de navegación dentro del banner */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent; /* Hacer que el fondo sea transparente */
-  padding: 10px 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-links {
+  padding: 20px 0;
+  background-color: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  position: relative;
 }
 
-.navbar-links li {
-  margin: 0 20px;
+.slider {
+  position: relative;
+  width: 100%; /* Hacer que ocupe el 100% del contenedor */
+  max-width: 800px; /* Puedes ajustarlo */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  min-height: 300px; /* Ajuste de altura mínima */
 }
 
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-  padding: 5px 10px;
+/* Estilo para las imágenes del slider */
+.slide {
+  width: 100%;
+  flex-shrink: 0;
 }
 
-.navbar-links a:hover {
-  color: #ff4081;
+.slide img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* Estilo para el texto del banner */
-.banner-text {
+/* Botones de navegación */
+.left-arrow,
+.right-arrow {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  text-align: center;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   z-index: 1;
+  transition: background-color 0.3s;
 }
 
-.banner-text h1 {
-  font-size: 3rem;
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.banner-text p {
-  font-size: 1.5rem;
+.left-arrow {
+  left: 10px;
 }
 
-/* Estilo responsivo */
-@media (max-width: 768px) {
-  .navbar-links {
-    flex-direction: row;
-    align-items: center;
-  }
+.right-arrow {
+  right: 10px;
+}
 
-  .navbar-links li {
-    margin: 0 15px;
-  }
+/* Estilo para los puntos de navegación */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
 
-  .banner-text h1 {
-    font-size: 2rem;
-  }
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: background-color 0.3s;
+}
 
-  .banner-text p {
-    font-size: 1.2rem;
-  }
-
-  /* Estilo para el contenedor del slider */
-  .slider-container {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  /* Estilo general del slider */
-  .slider {
-    position: relative;
-    width: 80%; /* Ajusta el ancho según prefieras */
-    max-width: 800px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Estilo para las imágenes del slider */
-  .slide {
-    width: 100%;
-    flex-shrink: 0;
-  }
-
-  .slide img {
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  /* Botones de navegación del slider */
-  .left-arrow,
-  .right-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 1;
-    transition: background-color 0.3s;
-  }
-
-  .left-arrow:hover,
-  .right-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  .left-arrow {
-    left: 10px;
-  }
-
-  .right-arrow {
-    right: 10px;
-  }
-
-  /* Estilo para los puntos de navegación */
-  .dots {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ddd;
-    transition: background-color 0.3s;
-  }
-
-  .dot.active {
-    background-color: #ff4081;
-  }
-
-  .left-arrow,
-  .right-arrow {
-    width: 30px;
-    height: 30px;
-  }
+.dot.active {
+  background-color: #ff4081;
 }
