@@ -17,9 +17,8 @@ function showSlide(index) {
     currentSlide = index; // De lo contrario, usamos el índice proporcionado
   }
 
-  // Movemos las imágenes usando el índice
-  const offset = -currentSlide * 100;  // Calculamos el desplazamiento en porcentaje
-  document.querySelector('.slides').style.transform = `translateX(${offset}%)`; // Aplicamos el desplazamiento
+  // Aplicamos la transformación al contenedor de las imágenes para moverlo
+  document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
 // Función para mover el slider a la izquierda
