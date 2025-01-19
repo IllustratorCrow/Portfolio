@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # O la rama que uses para producción
+      - main  # Esto se activará cada vez que hagas un push a la rama main
 
 jobs:
   deploy:
@@ -16,20 +16,21 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7  # Aquí se mantiene Ruby 2.7 ya que es compatible con la versión de Bundler que vamos a instalar
+          ruby-version: 2.7  # Versión de Ruby compatible
 
       - name: Install bundler 2.4.22
-        run: gem install bundler -v 2.4.22  # Instalamos la versión compatible de Bundler
+        run: gem install bundler -v 2.4.22  # Instalar Bundler
 
       - name: Install dependencies
         run: |
-          bundle install  # Se instalarán las dependencias con la versión de Bundler correcta
+          bundle install  # Instalar dependencias de Ruby
 
       - name: Build the site
-        run: bundle exec jekyll build  # Cambia esto si usas otro generador de sitio estático
+        run: bundle exec jekyll build  # Aquí puedes cambiar este comando si usas otro generador
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Rama de destino para el despliegue
-          folder: _site   # Carpeta que contiene los archivos generados
+          branch: gh-pages  # Rama donde se despliega el sitio
+          folder: _site     # Carpeta generada por el generador de sitios estáticos
+          token: ${{ secrets.GH_TOKEN }}  # Usa el token configurado
