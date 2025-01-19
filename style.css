@@ -1,93 +1,87 @@
-/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+* {box-sizing: border-box}
 
-.banner {
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
   position: relative;
-  width: 100%;
+  margin: auto;
 }
 
-.banner-image {
-  width: 100%;
-  height: auto;
+/* Ocultar las imágenes por defecto */
+.mySlides {
+  display: none;
 }
 
-.navbar {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-}
-
-.navbar-links {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-links li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.banner-text {
+/* Botones de siguiente y anterior */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Posicionamos el botón "next" a la derecha */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Al pasar el ratón, se cambia el color de fondo de los botones */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Texto de la leyenda */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
   text-align: center;
 }
 
-/* Estilos del slider */
-.slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 30px auto;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-}
-
-/* Flechas de navegación */
-.left-arrow, .right-arrow {
+/* Texto del número (1/4, etc.) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  top: 0;
+}
+
+/* Puntos indicadores */
+.dot {
   cursor: pointer;
-  z-index: 10;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.left-arrow {
-  left: 10px;
+.active, .dot:hover {
+  background-color: #717171;
 }
 
-.right-arrow {
-  right: 10px;
+/* Animación de desvanecimiento */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
