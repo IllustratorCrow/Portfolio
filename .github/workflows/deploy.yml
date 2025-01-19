@@ -9,9 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    permissions: # Agregar permisos requeridos
+    permissions:
       id-token: write
       contents: read
+      pages: write   # Agregar el permiso pages: write
 
     steps:
       - name: Check out repository
@@ -37,4 +38,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          folder: _site
+          artifact_name: github-pages
