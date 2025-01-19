@@ -1,9 +1,8 @@
-/* Estilo del Banner */
+/* Banner */
 .banner {
   position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
+  text-align: center;
+  color: white;
 }
 
 .banner-image {
@@ -11,22 +10,32 @@
   height: auto;
 }
 
-/* Estilo de la barra de navegación */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 .navbar {
   position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Centra la barra de navegación */
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
 .navbar-links {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
+  justify-content: center;
 }
 
 .navbar-links li {
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
 .navbar-links a {
@@ -35,82 +44,59 @@
   font-size: 18px;
 }
 
-/* Estilo del texto en el banner */
-.banner-text {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Centra el texto */
-  color: white;
-  text-align: center;
-}
-
-.banner-text h1 {
-  font-size: 36px;
-  margin: 0;
-}
-
-.banner-text p {
-  font-size: 20px;
-}
-
-/* Estilo para el contenido principal */
+/* Main Content */
 .main-content {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  margin: 20px;
 }
 
-/* Estilo de las columnas */
 .left-column, .right-column {
-  width: 30%; /* Hacemos las columnas más estrechas */
-  background-color: #f4f4f4;
-  padding: 20px;
-  box-sizing: border-box;
+  width: 20%;
+  background-color: lightgray;  /* Color de fondo para visualizar las columnas */
+  height: 300px;  /* Altura para las columnas */
 }
 
-/* Estilo para el slider */
+/* Slider */
 .slider-container {
   position: relative;
-  width: 80%; /* Hacemos el slider más ancho */
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden;  /* Oculta las imágenes fuera del contenedor */
+  width: 60%; /* Ajusta el tamaño del slider */
+  margin: auto;
+  overflow: hidden; /* Esconde las imágenes que no están visibles */
 }
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out; /* Suaviza el movimiento de las imágenes */
 }
 
 .slide {
-  min-width: 100%;
-  display: block;
+  min-width: 100%; /* Hace que cada imagen ocupe el 100% del ancho del contenedor */
+  transition: transform 0.5s ease-in-out;
 }
 
-.slide img {
+img {
   width: 100%;
   height: auto;
 }
 
-/* Estilo para las flechas */
+/* Flechas */
 .left-arrow, .right-arrow {
-  font-size: 50px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 50%;
-  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
   z-index: 10;
 }
 
 .left-arrow {
-  left: 20px;
+  left: 10px;
 }
 
 .right-arrow {
-  right: 20px;
+  right: 10px;
 }
