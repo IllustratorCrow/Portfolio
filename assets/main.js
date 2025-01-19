@@ -34,8 +34,7 @@ rightArrow.addEventListener('click', () => {
 
 // Hacemos que las imágenes se cambien automáticamente cada 5 segundos (opcional)
 setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length; // Mueve el slider automáticamente a la siguiente imagen
-  showSlide(currentSlide); // Llama la función para actualizar el slide visible
+  showSlide(currentSlide + 1); // Mueve el slider automáticamente a la siguiente imagen
 }, 5000); // 5000 milisegundos = 5 segundos
 
 // Inicializamos el slider mostrando la primera imagen
