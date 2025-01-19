@@ -18,7 +18,8 @@ function showSlide(index) {
   }
 
   // Aplicamos la transformación al contenedor de las imágenes para moverlo
-  document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+  const slidesContainer = document.querySelector('.slides');
+  slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
 // Función para mover el slider a la izquierda
@@ -33,7 +34,8 @@ rightArrow.addEventListener('click', () => {
 
 // Hacemos que las imágenes se cambien automáticamente cada 5 segundos (opcional)
 setInterval(() => {
-  showSlide(currentSlide + 1); // Mueve el slider automáticamente a la siguiente imagen
+  currentSlide = (currentSlide + 1) % slides.length; // Mueve el slider automáticamente a la siguiente imagen
+  showSlide(currentSlide); // Llama la función para actualizar el slide visible
 }, 5000); // 5000 milisegundos = 5 segundos
 
 // Inicializamos el slider mostrando la primera imagen
