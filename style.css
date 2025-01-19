@@ -78,3 +78,10 @@
 .dot.active {
   background-color: #ff4081;
 }
+
+/* Asegurarse que las imágenes del slider tengan un tamaño correcto */
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien sin distorsionarse */
+}
