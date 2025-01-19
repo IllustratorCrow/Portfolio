@@ -18,7 +18,9 @@ function showSlide(index) {
   }
 
   // Aplicamos la transformación al contenedor de las imágenes para moverlo
-  document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+  const slidesContainer = document.querySelector('.slides');
+  slidesContainer.style.transition = 'transform 0.5s ease'; // Añadimos transición para el movimiento suave
+  slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`; // Movemos el contenedor a la imagen actual
 }
 
 // Función para mover el slider a la izquierda
