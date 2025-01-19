@@ -50,11 +50,11 @@
 }
 
 .left-arrow {
-  left: 10px;
+  left: 20px; /* Separar un poco más de la imagen */
 }
 
 .right-arrow {
-  right: 10px;
+  right: 20px; /* Separar un poco más de la imagen */
 }
 
 /* Estilo para los puntos de navegación */
