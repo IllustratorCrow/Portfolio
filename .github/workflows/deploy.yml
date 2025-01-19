@@ -12,7 +12,10 @@ jobs:
     permissions:
       id-token: write
       contents: read
-      pages: write   # Agregar el permiso pages: write
+      pages: write
+
+    environment:
+      name: github-pages  # Añadir esta línea
 
     steps:
       - name: Check out repository
