@@ -3,6 +3,7 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const totalSlides = slides.length;
 
+// Mostrar la imagen en el índice adecuado
 const showSlide = (index) => {
   if (index >= totalSlides) {
     currentSlide = 0; // Si el índice es mayor que el total, vuelve al primer slide
@@ -37,6 +38,4 @@ dots.forEach((dot, index) => {
 });
 
 // Mostrar el primer slide al inicio
-document.addEventListener('DOMContentLoaded', () => {
-  showSlide(currentSlide);
-});
+showSlide(currentSlide);
