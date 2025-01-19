@@ -3,7 +3,6 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const totalSlides = slides.length;
 
-// Mostrar la imagen en el índice adecuado
 const showSlide = (index) => {
   if (index >= totalSlides) {
     currentSlide = 0; // Si el índice es mayor que el total, vuelve al primer slide
@@ -18,24 +17,17 @@ const showSlide = (index) => {
 
   // Activar el punto de navegación correspondiente
   dots.forEach(dot => dot.classList.remove('active'));
-  if (dots[currentSlide]) {
-    dots[currentSlide].classList.add('active');
-  }
+  dots[currentSlide].classList.add('active');
 };
 
 // Botones de navegación
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
+document.querySelector('.left-arrow').addEventListener('click', () => {
+  showSlide(currentSlide - 1); // Mostrar la imagen anterior
+});
 
-if (leftArrow && rightArrow) {
-  leftArrow.addEventListener('click', () => {
-    showSlide(currentSlide - 1); // Mostrar la imagen anterior
-  });
-
-  rightArrow.addEventListener('click', () => {
-    showSlide(currentSlide + 1); // Mostrar la imagen siguiente
-  });
-}
+document.querySelector('.right-arrow').addEventListener('click', () => {
+  showSlide(currentSlide + 1); // Mostrar la imagen siguiente
+});
 
 // Agregar interactividad a los puntos de navegación
 dots.forEach((dot, index) => {
@@ -44,5 +36,7 @@ dots.forEach((dot, index) => {
   });
 });
 
-// Mostrar el primer slide al inicio y asegurarse de que la primera imagen es visible
-showSlide(currentSlide);
+// Mostrar el primer slide al inicio
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentSlide);
+});
