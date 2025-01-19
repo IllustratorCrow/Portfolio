@@ -18,20 +18,16 @@ function showSlide(index) {
   }
 
   // Aplicamos la transformación al contenedor de las imágenes para moverlo
-  const slidesContainer = document.querySelector('.slides');
-  slidesContainer.style.transition = 'transform 0.5s ease'; // Añadimos transición para el movimiento suave
-  slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`; // Movemos el contenedor a la imagen actual
+  document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
 // Función para mover el slider a la izquierda
 leftArrow.addEventListener('click', () => {
-  console.log("Flecha izquierda clickeada"); // Verificación
   showSlide(currentSlide - 1); // Mostramos el slide anterior
 });
 
 // Función para mover el slider a la derecha
 rightArrow.addEventListener('click', () => {
-  console.log("Flecha derecha clickeada"); // Verificación
   showSlide(currentSlide + 1); // Mostramos el siguiente slide
 });
 
