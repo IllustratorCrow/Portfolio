@@ -151,7 +151,8 @@ html, body {
   }
 
   /* Botones de navegación del slider */
-  .slider-arrow {
+  .left-arrow,
+  .right-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -169,7 +170,8 @@ html, body {
     transition: background-color 0.3s;
   }
 
-  .slider-arrow:hover {
+  .left-arrow:hover,
+  .right-arrow:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
@@ -203,7 +205,8 @@ html, body {
     background-color: #ff4081;
   }
 
-  .slider-arrow {
+  .left-arrow,
+  .right-arrow {
     width: 30px;
     height: 30px;
   }
