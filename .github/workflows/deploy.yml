@@ -3,52 +3,31 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # O la rama que uses para producción
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write
-      contents: read
-      pages: write
-
-    environment:
-      name: github-pages  # Añadir esta línea para asegurar que el entorno sea correcto
-
     steps:
-      # Paso 1: Comprobamos el repositorio
-      - name: Check out repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      # Paso 2: Eliminar el directorio .git
-      - name: Remove Git directory
-        run: rm -rf .git
-
-      # Paso 3: Instalar Ruby y Bundler
-      - name: Set up Ruby and Bundler
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          ruby-version: 2.7
 
-      # Paso 4: Instalar dependencias de Jekyll
-      - name: Install Jekyll and dependencies
-        run: bundle install
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
 
-      # Paso 5: Construir el sitio
       - name: Build the site
-        run: bundle exec jekyll build -d _site
+        run: bundle exec jekyll build  # Cambia esto si usas otro generador de sitio estático
 
-      # Paso 6: Subir el sitio construido como un artefacto
-      - name: Upload the built site as an artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: _site
-
-      # Paso 7: Desplegar en GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          artifact_name: github-pages
+          branch: gh-pages  # Rama de destino para el despliegue
+          folder: _site   # Carpeta que contiene los archivos generados
