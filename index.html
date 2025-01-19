@@ -24,18 +24,44 @@
     </div>
   </div>
 
-  <!-- Slider -->
-  <div class="slider-container">
-    <div class="slides">
-      <!-- Las imágenes del slider -->
-      <div class="slide"><img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%201.png" alt="Proyecto 1"></div>
-      <div class="slide"><img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%202.png" alt="Proyecto 2"></div>
-      <div class="slide"><img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%203.png" alt="Proyecto 3"></div>
-      <div class="slide"><img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%204.png" alt="Proyecto 4"></div>
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+    <!-- Imagenes del slideshow -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%201.png" style="width:100%">
+      <div class="text">Proyecto 1</div>
     </div>
-    <!-- Flechas de navegación -->
-    <div class="left-arrow">&#10094;</div>
-    <div class="right-arrow">&#10095;</div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%202.png" style="width:100%">
+      <div class="text">Proyecto 2</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%203.png" style="width:100%">
+      <div class="text">Proyecto 3</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://raw.githubusercontent.com/IllustratorCrow/Portfolio/refs/heads/main/imagenes/Proyecto%204.png" style="width:100%">
+      <div class="text">Proyecto 4</div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- Indicadores de puntos -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
   </div>
 
   <script src="main.js"></script>
