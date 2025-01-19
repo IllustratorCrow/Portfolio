@@ -40,6 +40,7 @@ body {
 
 .navbar-links li {
   font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);  /* Sombra añadida */
 }
 
 .navbar-links li a {
@@ -54,6 +55,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  font-family: 'Garamond', serif;  /* Cambiado a Garamond */
 }
 
 .banner-text h1 {
@@ -62,6 +64,24 @@ body {
 
 .banner-text p {
   font-size: 1.2em;
+}
+
+/* Contenedores de las columnas */
+.columns-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-column, .right-column {
+  width: 15%; /* Cada columna lateral ocupará el 15% */
+  background-color: #f4f4f4; /* Color para visualizar las columnas */
+}
+
+.main-content {
+  width: 70%; /* El contenido principal ocupará el 70% */
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Slider Style */
