@@ -1,16 +1,14 @@
-/* Estilos generales */
+/* Estilo general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Banner */
 .banner {
   position: relative;
   width: 100%;
-  height: 300px; /* Ajusta según sea necesario */
+  height: 400px;
 }
 
 .banner-image {
@@ -19,19 +17,10 @@ body {
   object-fit: cover;
 }
 
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-}
-
 .navbar {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
 }
 
 .navbar-links {
@@ -41,51 +30,55 @@ body {
 
 .navbar-links li {
   display: inline;
-  margin-left: 20px;
+  margin: 0 10px;
 }
 
 .navbar-links a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
+  color: white;
 }
 
-/* Main Content */
+.banner-text {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+}
+
 .main-content {
   display: flex;
-  justify-content: space-between;
   margin: 20px;
 }
 
-/* Columnas */
 .left-column, .right-column {
-  width: 25%; /* Columnas más estrechas */
-  background-color: #f4f4f4; /* Color de fondo para visibilidad */
+  flex: 1;
   padding: 20px;
+  background-color: #f4f4f4;
 }
 
 .slider-container {
   position: relative;
-  width: 50%; /* Hacemos que el slider ocupe la mitad del espacio */
+  width: 60%;
   overflow: hidden;
 }
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
-.slide {
+.slide img {
   width: 100%;
+  height: auto;
 }
 
 .left-arrow, .right-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2em;
   color: white;
-  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   cursor: pointer;
 }
@@ -96,8 +89,4 @@ body {
 
 .right-arrow {
   right: 10px;
-}
-
-.left-arrow:hover, .right-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
