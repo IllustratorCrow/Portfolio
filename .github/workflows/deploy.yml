@@ -8,6 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions: # Agregar permisos requeridos
+      id-token: write
+      contents: read
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
@@ -18,20 +23,12 @@ jobs:
           ruby-version: 3.0
 
       - name: Install Jekyll and dependencies
-        run: |
-          bundle install
+        run: bundle install
 
       - name: Build the site
-        run: |
-          bundle exec jekyll build -d _site
-
-      - name: Upload artifact for deployment
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: _site
+        run: bundle exec jekyll build -d _site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: _site
