@@ -92,11 +92,15 @@
         currentSlide = index;
       }
 
+      // Animación de deslizamiento
       document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // Activar el punto correspondiente
       dots.forEach(dot => dot.classList.remove('active'));
       dots[currentSlide].classList.add('active');
     };
 
+    // Botones de navegación
     document.querySelector('.left-arrow').addEventListener('click', () => {
       showSlide(currentSlide - 1);
     });
@@ -105,13 +109,15 @@
       showSlide(currentSlide + 1);
     });
 
+    // Agregar interactividad a los puntos de navegación
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         showSlide(index);
       });
     });
 
-    showSlide(currentSlide); // Show the first slide initially
+    // Mostrar el primer slide al inicio
+    showSlide(currentSlide);
   </script>
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
