@@ -34,7 +34,6 @@ html, body {
   z-index: -1; /* Envía la imagen detrás del contenido */
 }
 
-
 /* Estilo para el menú de navegación dentro del banner */
 .navbar {
   position: fixed;
@@ -113,91 +112,99 @@ html, body {
   }
 
   /* Estilo para el contenedor del slider */
-.slider-container {
-  width: 100%;
-  padding: 20px 0;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+  .slider-container {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 
-/* Estilo general del slider */
-.slider {
-  position: relative;
-  width: 80%; /* Ajusta el ancho según prefieras */
-  max-width: 800px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Track para las imágenes del slider */
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-/* Estilo para las imágenes del slider */
-.slider-image {
-  width: 100%;
-  max-width: 100%;
-  flex-shrink: 0;
-  border-right: 1px solid #ddd;
-  object-fit: cover;
-}
-
-/* Botones de navegación del slider */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1;
-  transition: background-color 0.3s;
-}
-
-.slider-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.left-arrow {
-  left: 10px;
-}
-
-.right-arrow {
-  right: 10px;
-}
-
-/* Estilo responsivo para el slider */
-@media (max-width: 768px) {
+  /* Estilo general del slider */
   .slider {
-    width: 90%;
+    position: relative;
+    width: 80%; /* Ajusta el ancho según prefieras */
+    max-width: 800px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilo para las imágenes del slider */
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Botones de navegación del slider */
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+
+  .slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  /* Estilo para los puntos de navegación */
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #ff4081;
   }
 
   .slider-arrow {
     width: 30px;
     height: 30px;
-  }
-}
-
-
-  .banner {
-    height: 50vh;
   }
 }
