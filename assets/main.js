@@ -1,53 +1,41 @@
-// Inicialización del slider
-const slides = document.querySelectorAll('.slide'); // Selecciona todas las imágenes del slider
-const dots = document.querySelectorAll('.dot'); // Selecciona todos los puntos de navegación
-let currentIndex = 0; // Índice de la imagen actual
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
 
-// Función para cambiar la imagen activa
-function changeSlide(index) {
-  // Oculta todas las imágenes
-  slides.forEach(slide => slide.classList.remove('active'));
-  // Elimina la clase 'active' de todos los puntos
+// Mostrar la imagen en el índice adecuado
+const showSlide = (index) => {
+  if (index >= totalSlides) {
+    currentSlide = 0; // Si el índice es mayor que el total, vuelve al primer slide
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1; // Si el índice es negativo, va al último slide
+  } else {
+    currentSlide = index;
+  }
+
+  // Cambiar la posición del slider con la animación
+  document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+
+  // Activar el punto de navegación correspondiente
   dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentSlide].classList.add('active');
+};
 
-  // Muestra la imagen del índice actual
-  slides[index].classList.add('active');
-  // Marca el punto de navegación correspondiente
-  dots[index].classList.add('active');
-}
-
-// Función para mover el slider hacia la izquierda
-function prevSlide() {
-  currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-  changeSlide(currentIndex);
-}
-
-// Función para mover el slider hacia la derecha
-function nextSlide() {
-  currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-  changeSlide(currentIndex);
-}
-
-// Función para manejar clics en los puntos de navegación
-function goToSlide(index) {
-  currentIndex = index;
-  changeSlide(currentIndex);
-}
-
-// Configurar las flechas para cambiar las imágenes
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-
-leftArrow.addEventListener('click', prevSlide);
-rightArrow.addEventListener('click', nextSlide);
-
-// Configurar los puntos de navegación
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => goToSlide(index));
+// Botones de navegación
+document.querySelector('.left-arrow').addEventListener('click', () => {
+  showSlide(currentSlide - 1); // Mostrar la imagen anterior
 });
 
-// Iniciar el slider mostrando la primera imagen
-changeSlide(currentIndex);
+document.querySelector('.right-arrow').addEventListener('click', () => {
+  showSlide(currentSlide + 1); // Mostrar la imagen siguiente
+});
 
-// Establecer un intervalo para cambiar las imágenes automáticamente
-setInterval(nextSlide, 5000); // Cambiar cada 5 segundos
+// Agregar interactividad a los puntos de navegación
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    showSlide(index); // Cambiar al slide correspondiente al punto clickeado
+  });
+});
+
+// Mostrar el primer slide al inicio
+showSlide(currentSlide);
