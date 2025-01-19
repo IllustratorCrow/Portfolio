@@ -16,12 +16,14 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 2.7  # Aquí se mantiene Ruby 2.7 ya que es compatible con la versión de Bundler que vamos a instalar
+
+      - name: Install bundler 2.4.22
+        run: gem install bundler -v 2.4.22  # Instalamos la versión compatible de Bundler
 
       - name: Install dependencies
         run: |
-          gem install bundler
-          bundle install
+          bundle install  # Se instalarán las dependencias con la versión de Bundler correcta
 
       - name: Build the site
         run: bundle exec jekyll build  # Cambia esto si usas otro generador de sitio estático
