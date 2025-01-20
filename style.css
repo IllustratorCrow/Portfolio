@@ -1,30 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slideshow container */
 .slideshow-container {
-  position: relative;
   max-width: 1000px;
+  position: relative;
   margin: auto;
   overflow: hidden;
 }
 
+/* Slides */
 .mySlides {
   display: none;
-}
-
-.mySlides img {
   width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22px;
   padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
+  transition: 0.6s ease;
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 }
 
 .prev {
@@ -35,18 +66,38 @@
   right: 10px;
 }
 
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Dots */
+.dot-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .dot {
   cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 4px;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.dot.active, .dot:hover {
   background-color: #717171;
 }
