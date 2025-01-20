@@ -1,3 +1,4 @@
+/* Slideshow container */
 * {
   box-sizing: border-box;
 }
@@ -8,7 +9,6 @@ body {
   padding: 0;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -52,10 +52,9 @@ body {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+  background-color: transparent; /* No background */
+  border: none; /* No border */
 }
 
 .prev {
@@ -67,37 +66,17 @@ body {
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: #f2f2f2; /* Optional hover effect for arrows */
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Dots */
+/* Remove dots (commented out in case you want them later) */
+/*
 .dot-container {
   text-align: center;
   margin: 20px 0;
 }
 
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  display: none;
 }
-
-.dot.active, .dot:hover {
-  background-color: #717171;
-}
+*/
