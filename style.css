@@ -64,30 +64,32 @@ a:hover {
 }
 
 
-/* Estilos de la barra de navegación */
-.banner .navbar {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
+/* Barra de navegación */
+.navbar {
     display: flex;
-    justify-content: center;
-    z-index: 1;
+    justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+    align-items: center;
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 10px 0; /* Espaciado alrededor de la barra */
 }
 
+/* Enlaces de la barra de navegación */
 .navbar-links {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+    display: flex; /* Usamos Flexbox para alinear los elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilo para los elementos de la lista */
 .navbar-links li {
-    display: inline-block;
+    margin: 0 20px; /* Espaciado entre los enlaces */
 }
 
+/* Estilo para los enlaces */
 .navbar-links a {
-    text-decoration: none;
-    color: white;
+    color: #F4EFEB; /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
     font-size: 18px;
 }
 
