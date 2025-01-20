@@ -79,7 +79,7 @@ body {
 .slideshow-container {
     max-width: 1080px;
     position: relative;
-    margin: 20px auto; /* Centra el slider en la página */
+    margin: 40px auto; /* Añadido un margen superior para separar el slider del banner */
     height: 400px; /* Ajusta la altura del slider */
 }
 
