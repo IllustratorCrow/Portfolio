@@ -1,7 +1,7 @@
 /* Definición de la fuente personalizada */
 @font-face {
-    font-family: 'BuckwheatTC'; /* Nombre de la fuente */
-    src: url('fonts/BuckwheatTCSans-Painted.woff') format('woff'); /* Ruta del archivo WOFF */
+    font-family: 'BuckwheatTC';
+    src: url('fonts/BuckwheatTCSans-Painted.woff') format('woff'); /* Ruta de la fuente */
     font-weight: normal;
     font-style: normal;
 }
@@ -17,50 +17,114 @@ body {
     font-size: 16px; /* Tamaño de fuente base */
 }
 
-/* Estilos de encabezado */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'BuckwheatTC', sans-serif; /* Usar la misma fuente en encabezados */
-    color: #2c3e50; /* Color de texto oscuro */
+/* Estilos del Banner */
+.banner {
+    position: relative;
+    background-color: #3498db; /* Fondo azul del banner */
+    color: white;
+    padding: 60px 0; /* Espaciado en el banner */
+    text-align: center; /* Centrar el contenido */
+    font-family: 'BuckwheatTC', sans-serif; /* Fuente personalizada */
 }
 
-/* Estilo para los enlaces */
-a {
-    text-decoration: none; /* Sin subrayado */
-    color: #3498db; /* Color azul */
+.banner .navbar {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
 }
 
-a:hover {
-    color: #1d78a8; /* Color más oscuro en hover */
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Estilo para párrafos */
-p {
-    margin: 20px 0;
-    font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor para los párrafos */
+.navbar-links li {
+    display: inline-block;
 }
 
-/* Estilo para contenedores */
-.container {
-    width: 80%;
-    max-width: 1200px;
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.navbar-links a:hover {
+    color: #f1c40f; /* Color dorado al pasar el ratón */
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 20px;
+}
+
+/* Estilos de la imagen y el texto de los proyectos */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden;
 }
 
-/* Ejemplo de estilo de un botón */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.text {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+    font-size: 24px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos generales para botones */
 button {
-    background-color: #3498db; /* Fondo azul */
-    color: #fff; /* Texto blanco */
+    background-color: #3498db;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1rem;
 }
 
 button:hover {
-    background-color: #2980b9; /* Color más oscuro en hover */
+    background-color: #2980b9;
 }
