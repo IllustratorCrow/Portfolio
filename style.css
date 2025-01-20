@@ -14,13 +14,7 @@ body {
   width: 100%;
   height: auto;
   text-align: center; /* Centrar el texto */
-}
-
-/* Imagen del banner */
-.banner-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  background-color: #FAAD1B; /* Fondo amarillo del banner */
 }
 
 /* Texto del banner */
