@@ -5,38 +5,33 @@ function showSlides() {
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("dot");
 
-  // Hide all slides
+  // Ocultar todas las diapositivas
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
   slideIndex++;
 
-  // Loop back to the first slide if we reach the end
+  // Volver al primer slide si se supera el límite
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
 
-  // Deactivate all dots
+  // Desactivar todas las "dots"
   for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // Show the current slide and activate the corresponding dot
+  // Mostrar el slide actual y activar la "dot" correspondiente
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 
-  // Change slide every 5 seconds
+  // Cambiar diapositiva cada 5 segundos
   setTimeout(showSlides, 5000);
 }
 
-// Manual controls
-function plusSlides(n) {
-  slideIndex += n - 1;
-  showSlides();
-}
-
+// Controles manuales
 function currentSlide(n) {
-  slideIndex = n - 1;
+  slideIndex = n - 1; // Ajustar índice para la función
   showSlides();
 }
