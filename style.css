@@ -1,28 +1,53 @@
 /* Estilo general de la página */
 body {
-    font-family: 'Lexend Giga', sans-serif; /* Usar la fuente Lexend Giga */
+    font-family: 'Lexend Giga', sans-serif; /* Usar la fuente Lexend Giga en toda la página */
     margin: 0;
     padding: 0;
     background-color: #2F4157; /* Fondo verde azulado oscuro */
-    color: #fff; /* Color blanco para el texto general */
+    color: #F4EFEB; /* Color blanco para el texto general */
     line-height: 1.6;
     font-size: 16px; /* Tamaño base de fuente */
     text-align: center; /* Centra el texto de la página */
 }
 
-/* Estilos para el Banner */
+/* Estilo para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lexend Giga', sans-serif; /* Aseguramos que los encabezados usen Lexend Giga */
+    color: #F4EFEB; /* Color blanco para los encabezados */
+}
+
+/* Estilo para los párrafos */
+p {
+    font-family: 'Lexend Giga', sans-serif; /* Usar Lexend Giga para los párrafos */
+    font-size: 1.1rem; /* Tamaño ligeramente mayor para los párrafos */
+    color: #F4EFEB; /* Color blanco para los párrafos */
+    margin-bottom: 15px;
+}
+
+/* Estilos para enlaces */
+a {
+    font-family: 'Lexend Giga', sans-serif; /* Usar Lexend Giga en los enlaces */
+    text-decoration: none;
+    color: #3498db; /* Color de enlaces */
+}
+
+a:hover {
+    color: #1d78a8; /* Color de enlaces al pasar el ratón */
+}
+
+/* Banner */
 .banner {
     position: relative;
     width: 100%; /* Ancho completo */
     height: 983px; /* Altura fija del banner */
     background-image: url('imagenes/Fondo banner - ballena.png'); /* Ruta de la nueva imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center center; /* Centra la imagen dentro del banner */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     display: flex;
-    align-items: flex-start; /* Alinea el contenido al inicio (parte superior) */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    text-align: center; /* Alineación del texto */
+    align-items: flex-start; /* Alineación hacia la parte superior */
+    justify-content: center; /* Centrado horizontal */
+    text-align: center;
 }
 
 /* Texto en el banner */
