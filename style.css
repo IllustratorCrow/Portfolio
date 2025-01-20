@@ -1,7 +1,7 @@
 /* Definición de la fuente personalizada */
 @font-face {
     font-family: 'BuckwheatTC';
-    src: url('fonts/BuckwheatTCSans-Painted.woff') format('woff'); /* Ruta de la fuente */
+    src: url('fonts/BuckwheatTCSans-Painted.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +20,7 @@ body {
 /* Estilos del Banner */
 .banner {
     position: relative;
-    background-color: #3498db; /* Fondo azul del banner */
+    background-color: #f1c40f; /* Fondo amarillo del banner */
     color: white;
     padding: 60px 0; /* Espaciado en el banner */
     text-align: center; /* Centrar el contenido */
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar-links a:hover {
-    color: #f1c40f; /* Color dorado al pasar el ratón */
+    color: #3498db; /* Color azul al pasar el ratón */
 }
 
 .banner-text h1 {
