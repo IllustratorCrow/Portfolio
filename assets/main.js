@@ -1,24 +1,37 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+function showSlides() {
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 
-function showSlides(n) {
-  const slides = document.querySelectorAll(".mySlides");
-  const dots = document.querySelectorAll(".dot");
-  
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
+  slideIndex++;
 
-  slides.forEach(slide => slide.style.display = "none");
-  dots.forEach(dot => dot.classList.remove("active"));
+  // Loop back to the first slide if we reach the end
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
 
+  // Deactivate all dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Show the current slide and activate the corresponding dot
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].className += " active";
+
+  // Change slide every 5 seconds
+  setTimeout(showSlides, 5000);
+}
+
+// Manual controls
+function currentSlide(n) {
+  slideIndex = n - 1;
+  showSlides();
 }
