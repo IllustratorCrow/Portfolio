@@ -1,4 +1,4 @@
-/* Slideshow container */
+/* General styles */
 * {
   box-sizing: border-box;
 }
@@ -46,15 +46,16 @@ body {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  padding: 10px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   user-select: none;
-  background-color: transparent; /* No background */
-  border: none; /* No border */
+  background: none;
+  border: none;
+  text-shadow: 1px 1px 2px black;
 }
 
 .prev {
@@ -66,17 +67,10 @@ body {
 }
 
 .prev:hover, .next:hover {
-  color: #f2f2f2; /* Optional hover effect for arrows */
+  color: #f2f2f2;
 }
 
-/* Remove dots (commented out in case you want them later) */
-/*
+/* Remove dots */
 .dot-container {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.dot {
   display: none;
 }
-*/
