@@ -6,73 +6,74 @@
     font-style: normal;
 }
 
-/* Estilo general de la página */
+/* Aplicación de la fuente a toda la página */
 body {
-    font-family: 'Lexend Giga', sans-serif; /* Usar la fuente Lexend Giga en toda la página */
+    font-family: 'BuckwheatTC', sans-serif; /* Aplicar la fuente personalizada */
     margin: 0;
     padding: 0;
-    background-color: #2F4157; /* Fondo verde azulado oscuro */
-    color: #F4EFEB; /* Color blanco para el texto general */
+    background-color: #2F4157; /* Fondo verde oscuro */
+    color: #333; /* Texto en color gris oscuro */
     line-height: 1.6;
-    font-size: 16px; /* Tamaño base de fuente */
-    text-align: center; /* Centra el texto de la página */
+    font-size: 16px; /* Tamaño de fuente base */
 }
 
-/* Estilo para los encabezados */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lexend Giga', sans-serif; /* Aseguramos que los encabezados usen Lexend Giga */
-    color: #F4EFEB; /* Color blanco para los encabezados */
-}
-
-/* Estilo para los párrafos */
-p {
-    font-family: 'Lexend Giga', sans-serif; /* Usar Lexend Giga para los párrafos */
-    font-size: 1.1rem; /* Tamaño ligeramente mayor para los párrafos */
-    color: #F4EFEB; /* Color blanco para los párrafos */
-    margin-bottom: 15px;
-}
-
-/* Estilos para enlaces */
-a {
-    font-family: 'Lexend Giga', sans-serif; /* Usar Lexend Giga en los enlaces */
-    text-decoration: none;
-    color: #3498db; /* Color de enlaces */
-}
-
-a:hover {
-    color: #1d78a8; /* Color de enlaces al pasar el ratón */
-}
-
-/* Banner */
-.banner {
-    position: relative;
-    width: 100%; /* Ancho completo */
-    height: 983px; /* Altura fija del banner */
-    background-image: url('imagenes/Fondo banner - ballena.png'); /* Ruta de la nueva imagen */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+/* Barra de navegación */
+.navbar {
     display: flex;
-    align-items: flex-start; /* Alineación hacia la parte superior */
-    justify-content: center; /* Centrado horizontal */
-    text-align: center;
+    justify-content: center; /* Centra los enlaces en la barra de navegación */
+    align-items: center;
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 10px 0; /* Espaciado alrededor de la barra */
 }
 
-/* Texto en el banner */
-.banner-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    margin-top: -40px; /* Mueve el título más arriba */
-    color: #F4EFEB; /* Color de las letras del banner */
+/* Enlaces de la barra de navegación */
+.navbar-links {
+    display: flex; /* Usamos Flexbox para alinear los elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilo para los elementos de la lista */
+.navbar-links li {
+    margin: 0 20px; /* Espaciado entre los enlaces */
+}
+
+/* Estilo para los enlaces */
+.navbar-links a {
+    color: #F4EFEB; /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px;
+}
+
+.navbar-links a:hover {
+    color: #3498db; /* Color azul al pasar el ratón */
+}
+
+/* Estilo del banner */
+.banner {
+    background-image: url('imagenes/Fondo banner - ballena.png');
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    width: 100%;
+    height: 400px; /* Ajusta la altura según lo que necesites */
+    display: flex;
+    justify-content: center; /* Centra el contenido del banner horizontalmente */
+    align-items: center; /* Centra el contenido del banner verticalmente */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Título y texto del banner */
+.banner-text {
+    color: #F4EFEB; /* Color del texto */
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 32px; /* Tamaño del título */
+}
+
+/* Párrafo del banner */
 .banner-text p {
-    font-size: 20px;
-    color: #F4EFEB; /* Color de las letras del banner */
-    margin-top: 0;
+    font-size: 18px; /* Tamaño del texto debajo del título */
 }
-
-/* Resto de los estilos (como botones y contenedores) pueden seguir el mismo patrón */
 
 /* Estilos del slideshow */
 .slideshow-container {
