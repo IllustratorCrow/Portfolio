@@ -1,7 +1,7 @@
 /* Definición de la fuente personalizada */
 @font-face {
     font-family: 'BuckwheatTC'; /* Nombre de la fuente */
-    src: url('fonts/Buckwheat TC Sans Painted.otf') format('opentype'); /* Ruta de la fuente */
+    src: url('fonts/BuckwheatTCSans-Painted.woff') format('woff'); /* Ruta del archivo WOFF */
     font-weight: normal;
     font-style: normal;
 }
