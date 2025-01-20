@@ -1,139 +1,66 @@
-/* General */
-* {
-  box-sizing: border-box;
-}
-
-/* Fondo general de la página */
-body {
-  background-color: #344C36; /* Fondo verde oscuro */
-}
-
-/* Estilo general para el banner */
-.banner {
-  position: relative; /* Para posicionar elementos hijos con "absolute" */
-  width: 100%;
-  height: 300px; /* Altura fija para el banner */
-  text-align: center; /* Centrar el texto */
-  background-color: #FAAD1B; /* Fondo amarillo del banner */
-  display: flex;
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-}
-
-/* Texto del banner */
-.banner-text {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
-  z-index: 10; /* Asegúrate de que el texto esté encima de la imagen */
-  font-family: 'Aabak', sans-serif; /* Fuente personalizada */
-}
-
-/* Barra de navegación dentro del banner */
-.navbar {
-  position: absolute; /* Posiciona sobre la imagen */
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-  z-index: 10;
-}
-
-.navbar-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar-links li {
-  margin: 0 15px;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-  color: #f0a500; /* Cambia el color al pasar el mouse */
-}
-
-/* Contenedor del slideshow */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Ocultar las imágenes por defecto */
-.mySlides {
-  display: none;
-}
-
-/* Texto de las descripciones (captions) */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Botones "prev" y "next" */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%; /* Controla la posición vertical */
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  user-select: none;
-  background-color: transparent;
-  border: none;
-}
-
-.prev {
-  left: 0; /* Posición a la izquierda */
-  border-radius: 0 3px 3px 0;
-}
-
-.next {
-  right: 0; /* Posición a la derecha */
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: transparent; /* Sin fondo también al pasar el mouse */
-}
-
-/* Animación de desvanecimiento */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Fuente personalizada */
+/* Definición de la fuente personalizada */
 @font-face {
-  font-family: 'Aabak';
-  src: url('fonts/3ad21297a32567e87851b76b334ac59e.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'BuckwheatTC'; /* Nombre de la fuente */
+    src: url('fonts/Buckwheat TC Sans Painted.otf') format('opentype'); /* Ruta de la fuente */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicación de la fuente a toda la página */
+body {
+    font-family: 'BuckwheatTC', sans-serif; /* Aplicar la fuente personalizada */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333; /* Texto en color gris oscuro */
+    line-height: 1.6;
+    font-size: 16px; /* Tamaño de fuente base */
+}
+
+/* Estilos de encabezado */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'BuckwheatTC', sans-serif; /* Usar la misma fuente en encabezados */
+    color: #2c3e50; /* Color de texto oscuro */
+}
+
+/* Estilo para los enlaces */
+a {
+    text-decoration: none; /* Sin subrayado */
+    color: #3498db; /* Color azul */
+}
+
+a:hover {
+    color: #1d78a8; /* Color más oscuro en hover */
+}
+
+/* Estilo para párrafos */
+p {
+    margin: 20px 0;
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor para los párrafos */
+}
+
+/* Estilo para contenedores */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Ejemplo de estilo de un botón */
+button {
+    background-color: #3498db; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #2980b9; /* Color más oscuro en hover */
 }
