@@ -37,30 +37,27 @@ a:hover {
 
 /* Banner */
 .banner {
-    position: relative;
-    width: 100%; /* Ancho completo */
-    height: 983px; /* Altura fija del banner */
-    background-image: url('imagenes/Fondo banner - ballena.png'); /* Ruta de la nueva imagen */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-image: url('imagenes/Fondo banner - ballena.png');
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    width: 100%;
+    height: 400px; /* Ajusta la altura según lo que necesites */
     display: flex;
-    align-items: flex-start; /* Alineación hacia la parte superior */
-    justify-content: center; /* Centrado horizontal */
-    text-align: center;
+    justify-content: center; /* Centra el contenido del banner horizontalmente */
+    align-items: center; /* Centra el contenido del banner verticalmente */
+    text-align: center; /* Centra el texto dentro del contenedor */
 }
 
-/* Texto en el banner */
-.banner-text h1 {
-    font-size: 48px;
-    margin-top: 50px;
-    color: #F4EFEB; /* Color de las letras del banner */
+/* Título y texto del banner */
+.banner-text {
+    color: #F4EFEB; /* Color del texto */
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 32px; /* Tamaño del título */
 }
 
+/* Párrafo del banner */
 .banner-text p {
-    font-size: 20px;
-    color: #F4EFEB; /* Color de las letras del banner */
-    margin-top: 0; /* Elimina el margen superior */
+    font-size: 18px; /* Tamaño del texto debajo del título */
 }
 
 
@@ -68,7 +65,7 @@ a:hover {
 .navbar {
     display: flex;
     justify-content: flex-start; /* Alinea los enlaces a la izquierda */
-    align-items: center;
+    align-items: center; /* Mantén esta propiedad si quieres que los enlaces se alineen verticalmente */
     background-color: #333; /* Color de fondo de la barra de navegación */
     padding: 10px 0; /* Espaciado alrededor de la barra */
 }
