@@ -13,13 +13,12 @@ body {
 /* Estilos para el Banner */
 .banner {
     position: relative;
+    width: 100%; /* Ancho completo */
+    height: 983px; /* Altura fija del banner */
     background-image: url('imagenes/Fondo banner - ballena.png'); /* Nueva ruta de la imagen de fondo */
-    background-size: 100% auto; /* Asegura que la imagen ocupe el 100% del ancho sin perder su proporción */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-position: center center; /* Centra la imagen dentro del banner */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    height: 983px; /* Ajusta la altura del banner según el tamaño de la imagen */
-    width: 1080px; /* Ancho fijo de 1080px */
-    margin: 0 auto; /* Centra el banner horizontalmente en la página */
 }
 
 /* Texto en el banner */
