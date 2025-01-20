@@ -1,7 +1,6 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Control manual del slider
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -10,7 +9,6 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-// Mostrar las diapositivas
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
