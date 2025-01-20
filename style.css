@@ -91,7 +91,7 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 50%; /* Controla la posición vertical */
   width: auto;
   padding: 16px;
   color: white;
@@ -99,8 +99,18 @@
   font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
-  background-color: transparent; /* Sin fondo */
-  border: none; /* Eliminar bordes (opcional) */
+  background-color: transparent;
+  border: none;
+}
+
+.prev {
+  left: 0; /* Posición a la izquierda */
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0; /* Posición a la derecha */
+  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
