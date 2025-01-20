@@ -12,17 +12,16 @@ body {
 .banner {
   position: relative; /* Para posicionar elementos hijos con "absolute" */
   width: 100%;
-  height: auto;
+  height: 300px; /* Altura fija para el banner */
   text-align: center; /* Centrar el texto */
   background-color: #FAAD1B; /* Fondo amarillo del banner */
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
 }
 
 /* Texto del banner */
 .banner-text {
-  position: absolute; /* Superpone el texto sobre la imagen */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta el texto para estar perfectamente centrado */
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
   z-index: 10; /* Asegúrate de que el texto esté encima de la imagen */
