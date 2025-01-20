@@ -12,9 +12,9 @@ function currentSlide(n) {
 function showSlides(n) {
   const slides = document.querySelectorAll(".mySlides");
   const dots = document.querySelectorAll(".dot");
-  
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
+
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
 
   slides.forEach(slide => slide.style.display = "none");
   dots.forEach(dot => dot.classList.remove("active"));
