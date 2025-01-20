@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+/* Fondo general de la página */
+body {
+  background-color: #344C36; /* Fondo verde oscuro */
+}
+
 /* Estilo general para el banner */
 .banner {
   position: relative; /* Para posicionar elementos hijos con "absolute" */
@@ -27,6 +32,7 @@
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
   z-index: 10; /* Asegúrate de que el texto esté encima de la imagen */
+  font-family: 'Aabak', sans-serif; /* Fuente personalizada */
 }
 
 /* Barra de navegación dentro del banner */
@@ -62,7 +68,6 @@
 .navbar-links a:hover {
   color: #f0a500; /* Cambia el color al pasar el mouse */
 }
-
 
 /* Contenedor del slideshow */
 .slideshow-container {
@@ -130,4 +135,12 @@
   to {
     opacity: 1;
   }
+}
+
+/* Fuente personalizada */
+@font-face {
+  font-family: 'Aabak';
+  src: url('fonts/3ad21297a32567e87851b76b334ac59e.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
