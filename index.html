@@ -3,52 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Illustrator Crow</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Slider Simple</title>
+  <link rel="stylesheet" href="slider.css">
 </head>
 <body>
-  <!-- Banner -->
-  <div class="banner">
-    <img src="https://i.imgur.com/ahpKsvK.jpg" alt="Banner" class="banner-image">
-    <div class="navbar">
-      <ul class="navbar-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre mi</a></li>
-        <li><a href="#">Portafolio</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </div>
-    <div class="banner-text">
-      <h1>Bienvenido a mi Portafolio</h1>
-      <p>Explora mis proyectos y servicios</p>
-    </div>
-  </div>
-
   <!-- Slideshow container -->
-<div class="mySlides fade">
-  <img src="https://i.imgur.com/fSoRLtO.jpg" style="width:100%">
-</div>
-<div class="mySlides fade">
-  <img src="https://i.imgur.com/omrUgoY.jpg" style="width:100%">
-</div>
-<div class="mySlides fade">
-  <img src="https://i.imgur.com/sCOzlLK.jpg" style="width:100%">
-</div>
-<div class="mySlides fade">
-  <img src="https://i.imgur.com/kweP0bk.jpg" style="width:100%">
-</div>
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-</div>
-
-
-  <script src="main.js"></script>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://i.imgur.com/fSoRLtO.jpg" alt="Slide 1" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://i.imgur.com/omrUgoY.jpg" alt="Slide 2" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://i.imgur.com/sCOzlLK.jpg" alt="Slide 3" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://i.imgur.com/kweP0bk.jpg" alt="Slide 4" style="width:100%">
+    </div>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+  <script src="slider.js"></script>
 </body>
 </html>
