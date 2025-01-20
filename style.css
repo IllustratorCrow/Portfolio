@@ -1,23 +1,24 @@
-/* Aplicación de la fuente predeterminada */
+/* Estilo general de la página */
 body {
-    font-family: Arial, sans-serif; /* Usar fuente por defecto */
+    font-family: Arial, sans-serif; /* Fuente por defecto */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Fondo gris claro */
-    color: #333; /* Texto en color gris oscuro */
+    background-color: #f4f4f4; /* Fondo gris claro para la página */
+    color: #333; /* Color gris oscuro para el texto */
     line-height: 1.6;
-    font-size: 16px; /* Tamaño de fuente base */
+    font-size: 16px; /* Tamaño base de fuente */
 }
 
-/* Estilos del Banner con imagen de fondo */
+/* Estilos para el Banner */
 .banner {
     position: relative;
     background-image: url('imagenes/fondo banner.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
     color: white;
     padding: 60px 0; /* Espaciado en el banner */
-    text-align: center; /* Centrar el contenido */
+    text-align: center; /* Centra el contenido del banner */
 }
 
 .banner .navbar {
@@ -59,13 +60,13 @@ body {
     font-size: 20px;
 }
 
-/* Estilos para el slider, ocupando el 50% del ancho */
+/* Estilos para el slider */
 .slideshow-container {
     position: relative;
-    width: 50%; /* Establecer el 50% del ancho */
-    margin: 0 auto; /* Centrar horizontalmente */
+    width: 50%; /* Slider ocupa el 50% del ancho de la página */
+    margin: 0 auto; /* Centrado horizontal */
     overflow: hidden;
-    margin-top: 20px; /* Espaciado superior si es necesario */
+    margin-top: 20px; /* Espaciado superior */
 }
 
 .mySlides {
