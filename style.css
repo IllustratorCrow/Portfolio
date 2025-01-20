@@ -3,58 +3,66 @@
   box-sizing: border-box;
 }
 
-/* Banner styling */
+/* Estilo general para el banner */
 .banner {
-  position: relative;
+  position: relative; /* Para posicionar elementos hijos con "absolute" */
   width: 100%;
+  height: auto;
+  text-align: center; /* Centrar el texto */
 }
 
+/* Imagen del banner */
 .banner-image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
+/* Texto del banner */
 .banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute; /* Superpone el texto sobre la imagen */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el texto para estar perfectamente centrado */
   color: white;
-  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
+  z-index: 10; /* Asegúrate de que el texto esté encima de la imagen */
 }
 
-.banner-text h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.banner-text p {
-  font-size: 1.5rem;
-}
-
-/* Navigation bar */
+/* Barra de navegación dentro del banner */
 .navbar {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: absolute; /* Posiciona sobre la imagen */
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  z-index: 10;
 }
 
 .navbar-links {
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .navbar-links li {
-  display: inline;
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
 .navbar-links a {
-  color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  color: white;
+  font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
+
+.navbar-links a:hover {
+  color: #f0a500; /* Cambia el color al pasar el mouse */
+}
+
 
 /* Contenedor del slideshow */
 .slideshow-container {
