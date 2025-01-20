@@ -1,14 +1,6 @@
-/* Definición de la fuente personalizada */
-@font-face {
-    font-family: 'BuckwheatTC';
-    src: url('fonts/BuckwheatTCSans-Painted.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Aplicación de la fuente a toda la página */
+/* Aplicación de la fuente predeterminada */
 body {
-    font-family: 'BuckwheatTC', sans-serif; /* Aplicar la fuente personalizada */
+    font-family: Arial, sans-serif; /* Usar fuente por defecto */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4; /* Fondo gris claro */
@@ -24,7 +16,6 @@ body {
     color: white;
     padding: 60px 0; /* Espaciado en el banner */
     text-align: center; /* Centrar el contenido */
-    font-family: 'BuckwheatTC', sans-serif; /* Fuente personalizada */
 }
 
 .banner .navbar {
