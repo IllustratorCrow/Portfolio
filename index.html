@@ -8,12 +8,31 @@
 </head>
 <body>
   <div class="slideshow-container">
-    <div class="slides">
-      <div class="slide"><img src="https://i.imgur.com/fSoRLtO.jpg" alt="Slide 1"></div>
-      <div class="slide"><img src="https://i.imgur.com/omrUgoY.jpg" alt="Slide 2"></div>
-      <div class="slide"><img src="https://i.imgur.com/sCOzlLK.jpg" alt="Slide 3"></div>
-      <div class="slide"><img src="https://i.imgur.com/kweP0bk.jpg" alt="Slide 4"></div>
+    <div class="mySlides fade">
+      <img src="https://imgur.com/fSoRLtO.jpg" alt="Slide 1">
     </div>
+
+    <div class="mySlides fade">
+      <img src="https://imgur.com/omrUgoY.jpg" alt="Slide 2">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://imgur.com/sCOzlLK.jpg" alt="Slide 3">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://imgur.com/kweP0bk.jpg" alt="Slide 4">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
   </div>
   <script src="main.js"></script>
 </body>
