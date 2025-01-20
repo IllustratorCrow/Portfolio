@@ -59,14 +59,16 @@ body {
     font-size: 20px;
 }
 
-/* Estilos de la imagen y el texto de los proyectos */
+/* Estilos para el slider, ocupando el 50% del ancho */
 .slideshow-container {
     position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 50%; /* Establecer el 50% del ancho */
+    margin: 0 auto; /* Centrar horizontalmente */
     overflow: hidden;
+    margin-top: 20px; /* Espaciado superior si es necesario */
 }
 
+/* Ajustes para las imágenes dentro del slider */
 .mySlides {
     display: none;
 }
