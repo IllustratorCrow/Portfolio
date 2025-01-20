@@ -31,6 +31,11 @@ function showSlides() {
 }
 
 // Manual controls
+function plusSlides(n) {
+  slideIndex += n - 1;
+  showSlides();
+}
+
 function currentSlide(n) {
   slideIndex = n - 1;
   showSlides();
