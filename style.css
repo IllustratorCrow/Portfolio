@@ -15,10 +15,14 @@ body {
     position: relative;
     width: 100%; /* Ancho completo */
     height: 983px; /* Altura fija del banner */
-    background-image: url('imagenes/Fondo banner - ballena.png'); /* Nueva ruta de la imagen de fondo */
+    background-image: url('imagenes/Fondo banner - ballena.png'); /* Ruta de la nueva imagen */
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-position: center center; /* Centra la imagen dentro del banner */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alineación del texto */
 }
 
 /* Texto en el banner */
@@ -31,7 +35,9 @@ body {
 .banner-text p {
     font-size: 20px;
     color: #F4EFEB; /* Color de las letras del banner */
+    margin-top: 0; /* Elimina el margen superior */
 }
+
 
 /* Estilos de la barra de navegación */
 .banner .navbar {
