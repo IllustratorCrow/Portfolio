@@ -3,6 +3,59 @@
   box-sizing: border-box;
 }
 
+/* Banner styling */
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 1.5rem;
+}
+
+/* Navigation bar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbar-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 /* Contenedor del slideshow */
 .slideshow-container {
   max-width: 1000px;
@@ -38,21 +91,12 @@
   font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
+  background-color: transparent; /* Sin fondo */
+  border: none; /* Eliminar bordes (opcional) */
 }
 
-.prev {
-  left: 0;
-  border-radius: 0 3px 3px 0;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* Fondo semitransparente al pasar el mouse sobre los botones */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: transparent; /* Sin fondo también al pasar el mouse */
 }
 
 /* Animación de desvanecimiento */
