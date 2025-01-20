@@ -1,6 +1,6 @@
 /* Estilo general de la página */
 body {
-    font-family: Arial, sans-serif; /* Fuente por defecto */
+    font-family: 'Lexend Giga', sans-serif; /* Usar la fuente Lexend Giga */
     margin: 0;
     padding: 0;
     background-color: #2F4157; /* Fondo verde azulado oscuro */
@@ -30,6 +30,12 @@ body {
     font-size: 48px;
     margin-bottom: 10px;
     color: #F4EFEB; /* Color de las letras del banner */
+}
+
+.banner-text p {
+    font-size: 20px;
+    color: #F4EFEB; /* Color de las letras del banner */
+    margin-top: 0; /* Elimina el margen superior */
 }
 
 .banner-text p {
