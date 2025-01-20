@@ -54,9 +54,12 @@ body {
 /* Estilo del banner */
 .banner {
     background-image: url('imagenes/Fondo banner - ballena.png');
-    background-size: 100% auto; /* Ajusta el ancho al 100% y el alto se ajustará proporcionalmente */
-    width: 100%; /* Asegura que el banner ocupe todo el ancho de la página */
-    height: auto; /* El alto será automático en función del ancho para mantener la proporción */
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+    background-position: center; /* Centra la imagen tanto horizontal como verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 0;
+    padding-top: 39%; /* Ajustamos la altura del banner para que sea proporcional */
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
