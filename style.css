@@ -13,7 +13,7 @@ body {
 /* Estilos para el Banner */
 .banner {
     position: relative;
-    background-image: url('imagenes/fondo banner.png'); /* Ruta de la imagen de fondo */
+    background-image: url('imagenes/Fondo banner - ballena.png'); /* Nueva ruta de la imagen de fondo */
     background-size: 100% auto; /* Asegura que la imagen ocupe el 100% del ancho sin perder su proporción */
     background-position: center center; /* Centra la imagen dentro del banner */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
