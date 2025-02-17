@@ -1,7 +1,7 @@
 /* Importar la fuente Riesling */
 @font-face {
     font-family: 'Riesling';
-    src: url('fonts/riesling.woff') format('woff');
+    src: url('/fonts/riesling.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
