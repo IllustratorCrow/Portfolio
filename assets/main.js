@@ -1,31 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
     let slideIndex = 0;
     const slides = document.querySelectorAll(".carousel-item");
-    const totalSlides = slides.length;
+    const prevButton = document.querySelector(".carousel-control-prev");
+    const nextButton = document.querySelector(".carousel-control-next");
 
-    // Función para mostrar el slide actual y ocultar los demás
     function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[index].classList.add("active");
+        slides.forEach(slide => slide.style.display = "none");
+        slides[index].style.display = "block";
     }
 
-    // Función para ir al siguiente slide
     function nextSlide() {
-        slideIndex = (slideIndex + 1) % totalSlides;
+        slideIndex = (slideIndex + 1) % slides.length;
         showSlide(slideIndex);
     }
 
-    // Función para ir al slide anterior
     function prevSlide() {
-        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
         showSlide(slideIndex);
     }
 
-    // Agregar eventos a los botones
-    document.querySelector(".carousel-control-next").addEventListener("click", nextSlide);
-    document.querySelector(".carousel-control-prev").addEventListener("click", prevSlide);
+    prevButton.addEventListener("click", prevSlide);
+    nextButton.addEventListener("click", nextSlide);
 
-    // Configurar el autoplay cada 3 segundos
+    // Iniciar el primer slide
+    showSlide(slideIndex);
+
+    // Autoplay cada 3 segundos
     setInterval(nextSlide, 3000);
 });
-
